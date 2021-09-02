@@ -71,7 +71,7 @@ a:hover {
 
 i:hover {
   color: palevioletred;
-  font-size: 4rem;
+  font-weight: 900;
 }
 
 .mail {
@@ -98,6 +98,40 @@ i:hover {
 
 /* pAGE STYLE */
 /* Header */
+@-webkit-keyframes newAnimation {
+  0% {
+    border-color: aqua;
+  }
+  25% {
+    border-color: deepskyblue;
+  }
+  50% {
+    border-color: lightblue;
+  }
+  75% {
+    border-color: white;
+  }
+  100% {
+    border-color: red;
+  }
+}
+@keyframes newAnimation {
+  0% {
+    border-color: aqua;
+  }
+  25% {
+    border-color: deepskyblue;
+  }
+  50% {
+    border-color: lightblue;
+  }
+  75% {
+    border-color: white;
+  }
+  100% {
+    border-color: red;
+  }
+}
 header {
   background-color: rgba(51, 51, 51, 0.42);
   padding: 0.8rem 1rem;
@@ -105,16 +139,15 @@ header {
   font-weight: 700;
   position: fixed;
   width: 100%;
-  transition-property: all;
-  transition-duration: 1s;
 }
-header a {
+header .header-nav a {
   color: #aedfae;
-  padding-right: 3rem;
+  margin-right: 3rem;
 }
-header a:hover {
-  border-bottom: 4px solid red;
-  transition-timing-function: cubic-bezier(0.71, -0.06, 1.65);
+header .header-nav a:hover {
+  border-bottom: 4px dashed pink;
+  -webkit-animation: newAnimation 1s ease-in-out 0.2s infinite normal forwards;
+          animation: newAnimation 1s ease-in-out 0.2s infinite normal forwards;
 }
 header .active {
   color: palevioletred;
@@ -126,7 +159,63 @@ header .active {
   justify-content: space-between;
 }
 
+.resume {
+  color: #aedfae;
+}
+
 /* HERO SECTION */
+@-webkit-keyframes changeColor {
+  0% {
+    color: aqua;
+  }
+  15% {
+    color: #00a3a3;
+  }
+  25% {
+    color: #386c7e;
+  }
+  50% {
+    color: deepskyblue;
+  }
+  65% {
+    color: fuchsia;
+  }
+  75% {
+    color: white;
+  }
+  85% {
+    color: orangered;
+  }
+  100% {
+    color: #ee1515;
+  }
+}
+@keyframes changeColor {
+  0% {
+    color: aqua;
+  }
+  15% {
+    color: #00a3a3;
+  }
+  25% {
+    color: #386c7e;
+  }
+  50% {
+    color: deepskyblue;
+  }
+  65% {
+    color: fuchsia;
+  }
+  75% {
+    color: white;
+  }
+  85% {
+    color: orangered;
+  }
+  100% {
+    color: #ee1515;
+  }
+}
 .hero {
   height: 100vh;
   font-size: 3.2rem;
@@ -147,6 +236,8 @@ header .active {
 }
 .hero strong:hover {
   color: pink;
+  -webkit-animation: changeColor 2s ease-in-out 0.2s infinite normal forwards;
+          animation: changeColor 2s ease-in-out 0.2s infinite normal forwards;
 }
 
 .hero-div {
@@ -160,7 +251,7 @@ header .active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 4rem;
 }
 .about img {
   width: 20rem;
@@ -170,6 +261,7 @@ header .active {
   border: 0.2rem solid #e6320e;
   background-color: #094c86;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .about-head {
@@ -230,17 +322,15 @@ header .active {
 }
 
 .box {
-  border: 4px solid #1a1a47;
+  border: 4px solid #0404f8;
   background-color: #00d9ff;
   box-shadow: 4px 4px 4px 4px plum;
   padding: 3.5rem 3.5rem;
   text-align: center;
   border-radius: 10%;
-  color: midnightblue;
+  color: #010131;
   font-size: 2rem;
   font-weight: 900;
-  -webkit-animation: box 1s ease-in-out 2s infinite alternate forwards;
-          animation: box 1s ease-in-out 2s infinite alternate forwards;
 }
 .box i {
   font-size: 8rem;
@@ -275,7 +365,7 @@ header .active {
 .project-link {
   display: grid;
   grid-template-columns: repeat(6, 2fr);
-  grid-template-rows: repeat(3fr);
+  grid-template-rows: repeat(3, 2fr);
   gap: 2rem;
   row-gap: 0.6rem;
 }
@@ -312,7 +402,7 @@ header .active {
 .contact {
   height: 65vh;
   padding: 4rem;
-  background-color: #3b3a3a;
+  background-color: #686666;
 }
 .contact h4 {
   text-align: center;
@@ -326,6 +416,32 @@ header .active {
   color: #aedfae;
 }
 
+.contact p {
+  color: #aedfae;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 3rem;
+}
+
+.contact-div {
+  background-color: #02023d;
+  color: #e4e1e1;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem;
+  border-radius: 4rem;
+  margin: 0 3rem;
+  box-shadow: 2px 1px 6px 6px white;
+}
+.contact-div h5 {
+  color: #fd889c;
+  font-weight: 700;
+}
+.contact-div span {
+  color: #aedfae;
+  font-weight: 400;
+}
+
 .contact-address {
   display: flex;
   flex-direction: row;
@@ -334,6 +450,19 @@ header .active {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2;
+}
+
+.top {
+  text-align: center;
+}
+
+.top i {
+  color: aqua;
+}
+
+.top-btn {
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* FOOTER */
@@ -357,7 +486,7 @@ footer {
 /*  FOR  MEDIUM SCREENS */
 @media screen and (max-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .container {

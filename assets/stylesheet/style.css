@@ -352,7 +352,7 @@ header .active {
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-  margin-left: 12rem;
+  margin-left: 10rem;
 }
 .projects a {
   color: #aedfae;
@@ -415,22 +415,14 @@ header .active {
 }
 .contact h4 {
   text-align: center;
-  padding: 2rem;
-  font-size: 3rem;
-  font-weight: 500;
+  padding: 4rem;
+  font-size: 5rem;
+  font-weight: 300;
   color: #aedfae;
 }
 
 .contact-nav a {
   color: #aedfae;
-}
-
-.contact p {
-  color: #aedfae;
-  font-size: 1.9rem;
-  font-weight: 800;
-  text-align: center;
-  margin: 3rem 0;
 }
 
 .contact-div {
@@ -445,7 +437,7 @@ header .active {
 }
 .contact-div h5 {
   color: #fd889c;
-  font-weight: 700;
+  font-weight: 600;
 }
 .contact-div span {
   color: #aedfae;

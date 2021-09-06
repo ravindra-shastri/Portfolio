@@ -35,7 +35,6 @@ a {
     margin: 0 2rem;
     &:hover{
       color:palevioletred;
-      font-size: 2.4rem;
       font-weight: 900;
     }
   }
@@ -81,6 +80,7 @@ header {
     &:hover{
       border-bottom:4px dashed pink;
       animation:newAnimation 1s ease-in-out 0.2s infinite normal forwards;
+      color: rgb(255, 51, 119);
 }
     }
 }
@@ -269,16 +269,13 @@ strong {
           row-gap: .6rem;
         }
         .img{
-          width: 19.5rem;
+          width: 18rem;
           height: 11.5rem;
           padding: .4rem;
-          margin: 1rem;
+          margin: 1.6rem;
           border: 4px solid palevioletred;
           border-radius: 1rem;
           box-shadow: 4px 4px 4px 4px aqua;
-          &:hover{
-            margin-bottom: 2rem;
-          }
         }
         
         .btn{
@@ -312,13 +309,6 @@ strong {
 .contact-nav a{
         color:rgb(174, 223, 174); 
        }
-// .contact p{
-//          color: rgb(174, 223, 174);
-//          font-size: 4.9rem;
-//          font-weight: 300;
-//          text-align: center;
-//          margin: 3rem 0;
-//        }
 .contact-div{
         background-color:rgb(2, 2, 61);
         color:rgb(228, 225, 225);
